@@ -1,181 +1,211 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Google Pixel Buds Pro — premium wireless earbuds with Active Noise Cancellation. Available in 6 colors. Shop on the Google Store."
+    />
+    <title>Google Store</title>
+    <link rel="icon" type="image/png" href="./img/google-logo.png" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Store</title>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com" rel="stylesheet">
-  <link rel="stylesheet" href="responsive.css">
+  <body>
+    <!-- ===================== NAVIGATION ===================== -->
+    <nav aria-label="Main navigation">
+      <div class="links_contain">
+        <a href="./pages/watches.html"
+          ><img src="./img/google-logo.png" alt="logo"
+        /></a>
 
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="google-logo">
-        <a><img src="/img/google-logo.png" alt="Logo Google"></a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#">Phones</a></li>
-        <li><a href="#">Earbuds</a></li>
-        <li><a href="reloj.html">Watches</a></li>
-        <li><a href="#">Smart Home</a></li>
-        <li><a href="#">Accesories</a></li>
-        <li><a href="#">Subscriptions</a></li>
-      </ul>
-
-      <div class="nav-icons">
-        <ul>
-          <li><a href="#">
-              <img src="/img/icons/Search.svg" alt="serch,busqueda">
-            </a></li>
-          <li><a href="#">
-              <img src="/img/icons/Help.svg" alt="Help,Ayuda">
-            </a></li>
-          <li><a href="#">
-              <img src="/img/icons/Cart.svg" alt="Cart,carrito de compra">
-            </a></li>
-          <li><a href="#">
-              <img src="/img/icons/Avatar.svg" alt="User,Usuario"></a></li>
+        <ul class="links">
+          <li><a href="#">Phones</a></li>
+          <li>
+            <a href="./pages/earbuds.html" aria-current="page">Earbuds</a>
+          </li>
+          <li><a href="./pages/watches.html">Watches</a></li>
+          <li><a href="#">Smart Home</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Subscriptions</a></li>
         </ul>
       </div>
-      <ul class="menu-mobile">
-        <li><img src="/img/icons/menu-icon1.svg" alt="menu"></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <p>← See product details</p>
-
-      <div class="tarjeta-producto">
-
-        <div class="galeria-images">
-          <img src="img/earbuds/earbuds_01.png" alt="Auriculares" width="100">
-          <img src="img/earbuds/earbuds_02.png" alt="Auriculares" width="100">
-          <img src="img/earbuds/earbuds_03.png" alt="Auriculares" width="100">
-          <img src="img/earbuds/earbuds_04.png" alt="Auriculares" width="100">
-        </div>
-
-        <div class="image-principal">
-          <img src="img/earbuds/earbuds_01.png" alt="Auriculares" width="200">
-        </div>
-
-      </div>
-      <h1>Google Pixel Buds Pro</h1>
-      <p>Music & Sound</p>
-      <h2>229 €</h2>
-      <hr>
-
-    </section>
-
-
-
-    <section class="product-card">
-      <form>
-        <fieldset class="color-selector">
-          <legend>Choose a color</legend>
-          <label>
-            <input type="radio" name="color" value="blue" aria-label="Color azul" />
-            <span class="color blue"></span>
-          </label>
-          <label>
-            <input type="radio" name="color" value="white" aria-label="Color blanco" />
-            <span class="color white"></span>
-          </label>
-          <label>
-            <input type="radio" name="color" value="black" aria-label="Color negro" />
-            <span class="color black"></span>
-          </label>
-          <label>
-            <input type="radio" name="color" value="grey" aria-label="Color gris" />
-            <span class="color grey"></span>
-          </label>
-          <label>
-            <input type="radio" name="color" value="green" aria-label="Color verde" />
-            <span class="color green"></span>
-          </label>
-          <label>
-            <input type="radio" name="color" value="orange" aria-label="Color naranja" />
-            <span class="color orange"></span>
-          </label>
-        </fieldset>
-
-        <h2>229 €</h2>
-        <hr> <br>
-        <select name="Cantidad" id="cantidad" aria-label="Seleccionar cantidad">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-
-        <button type="submit">Add to Cart</button>
-      </form>
-
-      <footer class="delivery">
-        <p>
-          Delivers <time datetime="2024-04-20"> 20 Apr </time> to
-          <strong>08023</strong>
-        </p>
-      </footer>
-    </section>
-  </main>
-  <footer class="site-footer">
-
-    <div class="site-redes-sociales">
-      <ul class="lista-redes-sociales">
+      <ul class="icons">
         <li>
-          <a href="#" aria-label="X">
-            <img src="img/icons/SM-x.svg" alt="X" class="icon">
-          </a>
+          <a href="#"><img src="./img/icons/Search.svg" alt="Search" /></a>
         </li>
         <li>
-          <a href="#" aria-label="Instagram">
-            <img src="img/icons/SM-instagram.svg" alt="Instagram" class="icon">
-          </a>
+          <a href="#"><img src="./img/icons/Help.svg" alt="Help" /></a>
         </li>
         <li>
-          <a href="#" aria-label="Facebook">
-            <img src="img/icons/SM-facebook.svg" alt="Facebook" class="icon">
-          </a>
+          <a href="#"><img src="./img/icons/Cart.svg" alt="Cart" /></a>
         </li>
         <li>
-          <a href="#" aria-label="YouTube">
-            <img src="img/icons/SM-youtube.svg" alt="YouTube" class="icon">
-          </a>
+          <a href="#"
+            ><img src="./img/icons/Avatar.svg" alt="User account"
+          /></a>
         </li>
-        <li>
-          <a href="#" aria-label="TikTok">
-            <img src="img/icons/SM-tiktok.svg" alt="TikTok" class="icon">
-          </a>
+        <li class="menu">
+          <a href="#"
+            ><img src="./img/icons/icons-menu.svg" alt="Open menu"
+          /></a>
         </li>
-      </ul>
-    </div>
-
-    <nav class="site-footer-politicas" aria-label="Políticas del sitio">
-      <ul class="lista-politicas">
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Google Nest Commitment to Privacy</a></li>
-        <li><a href="#">Sales Terms</a></li>
-        <li><a href="#">Terms of Service</a></li>
       </ul>
     </nav>
 
-    <div class="site-pais">
-      <a href="#" aria-label="País seleccionado: España">
-        <img src="img/icons/Spain.svg" alt="Bandera de España" class="icon-bandera">
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main>
+      <a href="#" class="btn_back">
+        <img src="./img/icons/Arrow.svg" alt="arrow" />
+        See product details
       </a>
-      <span>Spain</span>
-    </div>
 
-  </footer>
-  <script src="dinamic.js"></script>
-</body>
+      <section>
+        <div>
+          <figure>
+            <div class="thumbnails">
+              <div>
+                <img
+                  src="./img/earbuds/earbuds_01.png"
+                  alt="Google Pixel Buds Pro - vista frontal con estuche abierto"
+                />
+              </div>
+              <div>
+                <img
+                  src="./img/earbuds/earbuds_02.png"
+                  alt="Google Pixel Buds Pro - vista lateral"
+                />
+              </div>
+              <div>
+                <img
+                  src="./img/earbuds/earbuds_03.png"
+                  alt="Google Pixel Buds Pro - auricular derecho"
+                />
+              </div>
+              <div>
+                <img
+                  src="./img/earbuds/earbuds_04.png"
+                  alt="Google Pixel Buds Pro - estuche cerrado"
+                />
+              </div>
+            </div>
 
+            <div class="image">
+              <img
+                src="./img/earbuds/earbuds_01.png"
+                alt="Google Pixel Buds Pro - vista frontal con estuche abierto"
+              />
+            </div>
+          </figure>
+        </div>
+
+        <div class="info_product">
+          <div class="description">
+            <h1>Google Pixel Buds Pro</h1>
+            <p>Music & Sound</p>
+            <p class="price_summary">229 €</p>
+            <hr />
+            <p id="color-label">Choose a Color</p>
+          </div>
+
+          <div class="purchase">
+            <fieldset class="colors" aria-labelledby="color-label">
+              <input type="radio" name="color" id="color-blue" checked />
+              <label for="color-blue" class="color-swatch swatch-blue"></label>
+
+              <input type="radio" name="color" id="color-gray-light" />
+              <label
+                for="color-gray-light"
+                class="color-swatch swatch-gray-light"
+              ></label>
+
+              <input type="radio" name="color" id="color-dark" />
+              <label for="color-dark" class="color-swatch swatch-dark"></label>
+
+              <input type="radio" name="color" id="color-gray" />
+              <label for="color-gray" class="color-swatch swatch-gray"></label>
+
+              <input type="radio" name="color" id="color-green" />
+              <label
+                for="color-green"
+                class="color-swatch swatch-green"
+              ></label>
+
+              <input type="radio" name="color" id="color-red" />
+              <label for="color-red" class="color-swatch swatch-red"></label>
+            </fieldset>
+
+            <div class="purchase_details">
+              <p class="price_purchase">229 €</p>
+              <hr />
+              <div class="select_quantity">
+                <label for="quantity" class="sr-only">Quantity</label>
+                <select name="quantity" id="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <button>Add to cart</button>
+              </div>
+
+              <div class="delivery">
+                <img src="./img/icons/Delivery.svg" alt="Free delivery" />
+                <p>Delivers 29 Apr to <span>08023</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <div>
+        <div class="social-icons">
+          <a href="#"
+            ><img src="./img/icons/SM-x.svg" alt="X" loading="lazy"
+          /></a>
+          <a href="#"
+            ><img
+              src="./img/icons/SM-instagram.svg"
+              alt="Instagram"
+              loading="lazy"
+          /></a>
+          <a href="#"
+            ><img
+              src="./img/icons/SM-facebook.svg"
+              alt="Facebook"
+              loading="lazy"
+          /></a>
+          <a href="#"
+            ><img src="./img/icons/SM-youtube.svg" alt="YouTube" loading="lazy"
+          /></a>
+          <a href="#"
+            ><img src="./img/icons/SM-tiktok.svg" alt="TikTok" loading="lazy"
+          /></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Google Nest Commitment to Privacy</a>
+          <a href="#">Sales Terms</a>
+          <a href="#">Terms of Service</a>
+          <div class="country">
+            <img src="./img/icons/Spain.svg" alt="Spain" /> Spain
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./scripts/dynamic.js"></script>
+  </body>
 </html>

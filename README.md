@@ -1,52 +1,161 @@
-# 🛒 Google Store Clone - Factoría F5
+# Google Store — Product Showcase
 
-Este proyecto es una réplica detallada de la interfaz de la **Google Store**, desarrollada como parte del proceso de aprendizaje en el bootcamp de **Factoría F5**. El objetivo es aplicar estándares profesionales de maquetación, organización de código y metodologías de trabajo ágiles.
-
-## 👩‍💻 Equipo de Desarrollo (Coders)
-Proyecto realizado con ❤️ por:
-* **Yasira Gonzáles** - [@yasiragarg](https://github.com/yasiragarg)
-* **Dhana Corredor** - [@dhanacorredor](https://github.com/dhanacorredor)
-* **Doris Guerra** - [@dorisguerra68](https://github.com/dorisguerra68)
-* **Irina Díaz** - [@irinadiaz22](https://github.com/irinadiaz22)
+A pixel-perfect, responsive product detail page replicating the Google Store experience. Built as a Figma-to-code exercise using semantic HTML5 and CSS3, featuring two product pages: **Google Pixel Buds Pro** and **Fitbit Inspire 3**.
 
 ---
 
-## 🔗 Enlaces del Proyecto
-* **Demo en vivo:** [En construcción] 
-* **Wireframe (Baja fidelidad):** [Ver en Figma](https://www.figma.com/proto/uSJ56QLh344kVhfdJwfiBD/Wireframe-de-baja-fidelidad?page-id=2%3A2&node-id=3-7&p=f&viewport=187%2C198%2C0.8&t=sdtCKfvw7EWQvy1b-1&scaling=scale-down&content-scaling=fixed)
-* **Wireframe (Alta fidelidad):**  [Ver en Figma](https://www.figma.com/proto/Ce1uLU9K7GVLCGS8plmpLQ/wireframe-baja-fidalidad?page-id=53%3A2&node-id=53-3&p=f&viewport=93%2C20%2C0.71&t=3EgOpoUX3VaGJOww-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=53%3A3)
-* **Diseño de referencia:** [Figma original (Notion)](https://factoriaf5.notion.site/Google-Store-143e084deeb9800e8190c97f9263de72)
-* **Gestión del Proyecto:** [GitHub Project (Tablero Kanban)](https://github.com/users/DhanaCorredor/projects/3)
+## Live Preview
+
+| Page | Description |
+|------|-------------|
+| `index.html` | Google Pixel Buds Pro — earbuds product detail |
+| `pages/watches.html` | Fitbit Inspire 3 — health & fitness tracker detail |
 
 ---
 
-## 🛠️ Tecnologías y Herramientas
-* **HTML5:** Marcado semántico, accesibilidad y validación W3C.
-* **CSS3:** Flexbox, Grid Layout, Variables y Mobile First.
-* **Git & GitHub:** Flujo de ramas, .gitignore y GitHub Pages.
-* **Metodología:** Agile (SCRUM) con tablero Kanban.
+## Features
+
+- **Mobile-first responsive design** — seamless across mobile, tablet, and desktop
+- **Interactive color selector** — swatches with live product image preview (watches)
+- **Accessible markup** — semantic HTML5, ARIA attributes, descriptive alt texts, and proper form label associations
+- **CSS Grid + Flexbox layout** — two-column desktop layout with sticky purchase panel
+- **No JavaScript** — all interactivity handled with CSS (`:checked`, `:hover`, transitions)
+- **Google Fonts** — Inter typeface (400, 700)
+- **SVG icon system** — 18 scalable UI icons (navigation, social media, utility)
 
 ---
 
-## ✅ Criterios de Éxito Aplicados
+## Tech Stack
 
-### 🏗️ Estructura y HTML Semántico
-- **Semántica:** Uso de etiquetas estructurales (`header`, `main`, `section`, `article`, `footer`).
-- **Validación:** Código verificado y libre de errores en [W3C Validator](https://validator.w3.org/).
-- **Optimización de Imágenes:** Uso de formatos adecuados: `.svg` (iconos), `.webp` (fotos) y `.png` (transparencias).
-- **Metadatos:** Cabecera configurada con `utf-8`, meta descripciones y títulos SEO.
+| Technology | Usage |
+|------------|-------|
+| HTML5 | Semantic structure, forms, accessibility |
+| CSS3 | Custom properties, Flexbox, Grid, media queries |
+| Google Fonts | Inter typeface |
+| SVG | Scalable UI and social icons |
 
-### 🎨 CSS, Diseño y Código Limpio
-- **Responsive Design:** Estrategia **Mobile First** con uso de Media Queries y unidades relativas.
-- **Layout Moderno:** Uso de **CSS Grid** para la estructura general y **Flexbox** para componentes.
-- **Principios KISS & DRY:** Soluciones simples, código legible y sin repeticiones innecesarias.
-- **Selectores:** Uso correcto de clases para grupos e IDs para elementos únicos.
-- **Variables:** Implementación de variables CSS para facilitar el mantenimiento.
+---
 
-### 👥 Metodología Agile (SCRUM)
-Hemos gestionado el desarrollo utilizando **SCRUM** y un tablero **Kanban** en **GitHub Projects**:
+## Project Structure
 
-* **Product Backlog:** Listado inicial de todos los requisitos del proyecto.
-* **Gestión Visual (Kanban):** Organización de tareas en columnas (*Backlog, In Progress, Review, Done*) para optimizar el flujo de trabajo.
-* **Daily Meetings:** Sincronizaciones diarias para comunicar avances y resolver bloqueos.
-* **Colaboración:** Reparto equitativo de roles y revisión de código entre compañeras para asegurar la calidad y el cumplimiento de los estándares establecidos.
+```
+02-Ejercicio-Google-Store/
+├── index.html               # Pixel Buds Pro product page
+├── pages/
+│   └── watches.html         # Fitbit Inspire 3 product page
+├── styles/
+│   ├── style.css            # Base stylesheet (shared, mobile-first)
+│   └── watches_style.css    # Watches page overrides
+└── img/
+    ├── google-logo.png
+    ├── earbuds/             # 4 product images
+    ├── smartwatch/          # 3 product images (black, pink, yellow)
+    └── icons/               # 18 SVG icons
+```
+
+---
+
+## CSS Architecture
+
+Styles follow a **mobile-first** strategy with progressive enhancement via media queries:
+
+| Breakpoint | Behavior |
+|------------|----------|
+| `< 768px` | Single column, hidden nav links, stacked buttons |
+| `768px – 1023px` | Nav links visible, 2×2 color grid |
+| `≥ 1024px` | Two-column grid, thumbnail gallery, side-by-side purchase panel |
+
+**Design tokens** (CSS custom properties):
+
+```css
+--white, --gray-light, --gray, --gray-dark, --blue
+
+--font-primary: "Inter", sans-serif
+--title-size: 35px
+--subtitle-size: 20px
+--text-size: 12px
+```
+
+---
+
+## Getting Started
+
+No build tools or dependencies required. Clone the repo and open `index.html` in any modern browser.
+
+```bash
+git clone https://github.com/Adriasu09/02-Ejercicio-Google-Store.git
+cd 02-Ejercicio-Google-Store
+# Open index.html in your browser
+```
+
+---
+
+## Git Workflow
+
+This project follows a **feature branch workflow**:
+
+```
+main ← develop ← feat/your-feature
+```
+
+| Branch | Purpose |
+|--------|---------|
+| `main` | Production-ready code. No direct commits. |
+| `develop` | Integration branch. No direct commits. |
+| `feat/*` | Your personal working branch. |
+
+### Daily workflow
+
+```bash
+# 1. Switch to your branch
+git checkout feat/your-feature
+
+# 2. Sync with latest changes from develop
+git pull origin develop
+
+# 3. Work on your files...
+
+# 4. Stage and commit your changes
+git add .
+git commit -m "feat(section): brief description of change"
+
+# 5. Push to remote
+git push origin feat/your-feature
+
+# 6. Open a Pull Request on GitHub targeting develop
+```
+
+### Commit message convention
+
+Follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+```
+feat(navbar): add responsive hamburger menu
+fix(footer): correct social icon alignment on mobile
+refactor(styles): remove unused CSS custom properties
+improve(index): enhance semantic markup and alt texts
+```
+
+### Common errors
+
+| Error | Fix |
+|-------|-----|
+| `Please commit your changes before merge` | Run `git add . && git commit -m "your message"` first |
+| `Rejected — non-fast-forward` | Run `git pull origin feat/your-feature`, resolve conflicts, then push again |
+| Working on wrong branch | Run `git checkout feat/your-feature` |
+
+---
+
+## Contributing
+
+1. Branch off from `develop` — never commit directly to `main` or `develop`
+2. Keep commits small and focused on a single change
+3. Write descriptive commit messages using Conventional Commits format
+4. Open a Pull Request against `develop` with a clear title and description
+5. Address any review comments before the PR is merged
+
+---
+
+## License
+
+This project was created for educational purposes as part of the [Factoria F5](https://factoriaf5.org/) bootcamp curriculum.
