@@ -45,7 +45,7 @@
           <a href="#"><img src="../img/icons/Help.svg" alt="Help" /></a>
         </li>
         <li>
-          <a href="#"><img src="../img/icons/Cart.svg" alt="Cart" /></a>
+          <a href="#" id="abrir-carrito"><img src="../img/icons/Cart.svg" alt="Cart" /></a>
         </li>
         <li>
           <a href="#"><img src="../img/icons/Avatar.svg" alt="User account" /></a>
@@ -70,6 +70,7 @@
               <img
                 src="../img/smartwatch/smartwatch_black.png"
                 alt="Fitbit Inspire 3 - Midnight Zen"
+                class="image"
               />
             </div>
           </figure>
@@ -86,64 +87,79 @@
 
           <!-- Color selector and purchase actions -->
           <div class="purchase">
-            <fieldset class="watch-colors" aria-labelledby="color-label">
-              <input type="radio" name="color" id="color-midnight" checked />
-              <label for="color-midnight" class="watch-swatch swatch-midnight">
-                <img
-                  src="../img/smartwatch/smartwatch_black.png"
-                  alt="Midnight Zen"
+            <!-- ✅ FORMULARIO CORREGIDO -->
+            <form id="formulario-compra">
+              <fieldset class="watch-colors" aria-labelledby="color-label">
+                <!-- ✅ Agregados value y data-image -->
+                <input 
+                  type="radio" 
+                  name="color" 
+                  id="color-midnight" 
+                  value="Midnight Zen"
+                  data-image="../img/smartwatch/smartwatch_black.png"
+                  checked 
                 />
-                <span
-                  >Midnight<br />
-                  Zen</span
-                >
-              </label>
+                <label for="color-midnight" class="watch-swatch swatch-midnight">
+                  <img
+                    src="../img/smartwatch/smartwatch_black.png"
+                    alt="Midnight Zen"
+                  />
+                  <span>Midnight<br />Zen</span>
+                </label>
 
-              <input type="radio" name="color" id="color-lilac" />
-              <label for="color-lilac" class="watch-swatch swatch-lilac">
-                <img
-                  src="../img/smartwatch/smartwatch_pink.png"
-                  alt="Lilac Bliss"
+                <input 
+                  type="radio" 
+                  name="color" 
+                  id="color-lilac" 
+                  value="Lilac Bliss"
+                  data-image="../img/smartwatch/smartwatch_pink.png"
                 />
-                <span
-                  >Lilac<br />
-                  Bliss</span
-                >
-              </label>
+                <label for="color-lilac" class="watch-swatch swatch-lilac">
+                  <img
+                    src="../img/smartwatch/smartwatch_pink.png"
+                    alt="Lilac Bliss"
+                  />
+                  <span>Lilac<br />Bliss</span>
+                </label>
 
-              <input type="radio" name="color" id="color-morning" />
-              <label for="color-morning" class="watch-swatch swatch-morning">
-                <img
-                  src="../img/smartwatch/smartwatch_yellow.png"
-                  alt="Morning Glow"
+                <input 
+                  type="radio" 
+                  name="color" 
+                  id="color-morning" 
+                  value="Morning Glow"
+                  data-image="../img/smartwatch/smartwatch_yellow.png"
                 />
-                <span
-                  >Morning<br />
-                  Glow</span
-                >
-              </label>
-            </fieldset>
+                <label for="color-morning" class="watch-swatch swatch-morning">
+                  <img
+                    src="../img/smartwatch/smartwatch_yellow.png"
+                    alt="Morning Glow"
+                  />
+                  <span>Morning<br />Glow</span>
+                </label>
+              </fieldset>
 
-            <div class="purchase_details">
-              <p class="price_purchase">99,95 €</p>
-              <hr />
-              <div class="select_quantity">
-                <label for="quantity" class="sr-only">Quantity</label>
-                <select name="quantity" id="quantity">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-                <button>Add to cart</button>
+              <div class="purchase_details">
+                <p class="price_purchase">99,95 €</p>
+                <hr />
+                <div class="select_quantity">
+                  <label for="quantity" class="sr-only">Quantity</label>
+                  <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <!-- ✅ Botón con type="submit" -->
+                  <button type="submit">Add to cart</button>
+                </div>
+
+                <div class="delivery">
+                  <img src="../img/icons/Delivery.svg" alt="Free delivery" />
+                  <p>Delivers 29 Apr to <span>08023</span></p>
+                </div>
               </div>
-
-              <div class="delivery">
-                <img src="../img/icons/Delivery.svg" alt="Free delivery" />
-                <p>Delivers 29 Apr to <span>08023</span></p>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -151,6 +167,19 @@
 
     <!-- ===================== FOOTER ===================== -->
     <footer>
+      <!-- ✅ CARRITO AGREGADO (igual a index.html) -->
+      <div 
+        id="carrito-ventana" 
+        style="display: none; position: fixed; top: 70px; right: 20px; background: white; border: 1px solid #ccc; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000; min-width: 250px; color: black;"
+      >
+        <h3>Tu Carrito 🛒</h3>
+        <ul id="lista-carrito" style="list-style: none; padding: 0; margin-top: 10px;">
+          <li>El carrito está vacío</li>
+        </ul>
+        <hr />
+        <button id="cerrar-carrito" style="cursor: pointer; padding: 5px 10px;">Cerrar</button>
+      </div>
+
       <div>
         <!-- Social media links -->
         <div class="social-icons">
@@ -179,5 +208,6 @@
         </div>
       </div>
     </footer>
+    <script src="../scripts/dynamic.js"></script>
   </body>
 </html>
